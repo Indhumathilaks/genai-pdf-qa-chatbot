@@ -26,18 +26,14 @@ Extract the content of the PDF into pages.
 Import and initialize OpenAIEmbeddings to generate embeddings.
 
 Initialize the Chroma vector database with:
-
-    Persistent storage directory (persist_directory).
-
-    The embedding function.
+* Persistent storage directory (persist_directory).
+* The embedding function.
 
 ### 4)Define the Language Model:
 
 Import and initialize ChatOpenAI with:
-    
-    Model name (gpt-4).
-
-    Temperature (0) for deterministic responses.
+* Model name (gpt-4).
+* Temperature (0) for deterministic responses.
 
 ### 5)Create a Retrieval Prompt:
 
@@ -45,21 +41,17 @@ Define a concise, user-friendly prompt template to:
 
 Use context from the document.
 
-    Limit answers to three sentences.
+* Limit answers to three sentences.
 
-    Encourage polite responses with "Thanks for asking!" at the end.
+* Encourage polite responses with "Thanks for asking!" at the end.
 
 ### 6) Build the Retrieval Chain:
 
 Initialize the RetrievalQA chain by:
-
-    Specifying the language model (llm).
-    
-    Linking the retriever (vectordb.as_retriever()).
-    
-    Applying the prompt template.
-    
-    Enabling source document return for transparency.
+* Specifying the language model (llm).  
+* Linking the retriever (vectordb.as_retriever()).
+* Applying the prompt template.
+* Enabling source document return for transparency.
 
 ### 7)Run the Query:
 
@@ -128,8 +120,8 @@ print("Answer:", response)
 
 ### RESULT:
 
-Prompt: A structured prompt template was designed to pass the document content and user query to the language model.
+* Prompt: A structured prompt template was designed to pass the document content and user query to the language model.
 
-Model: OpenAI's GPT model was used to process the input data and provide an answer based on the document's content.
+* Model: OpenAI's GPT model was used to process the input data and provide an answer based on the document's content.
 
-Output Parsing: The model's output is returned as the answer to the query, ensuring that it provides relevant responses based on the content extracted from the PDF.
+* Output Parsing: The model's output is returned as the answer to the query, ensuring that it provides relevant responses based on the content extracted from the PDF.
